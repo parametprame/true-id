@@ -41,6 +41,12 @@ const WolfClosetSelectImage = () => {
     <>
       <div className="hidden md:flex flex-row justify-center md:justify-end">
         <div
+          className="hover:bg-[#5051E2] hover:text-white rounded-lg items-center py-3 px-2 cursor-pointer "
+          onClick={() => nextPageNumber("1")}
+        >
+          <a className="text-xl px-2">Background</a>
+        </div>
+        <div
           className="hover:bg-[#5051E2] hover:text-white rounded-lg items-center py-3 px-2 cursor-pointer"
           onClick={() => nextPageNumber("3")}
         >
@@ -52,13 +58,6 @@ const WolfClosetSelectImage = () => {
         >
           <a className="text-xl px-2">Shirt</a>
         </div>
-
-        <div
-          className="hover:bg-[#5051E2] hover:text-white rounded-lg items-center py-3 px-2 cursor-pointer "
-          onClick={() => nextPageNumber("1")}
-        >
-          <a className="text-xl px-2">Background</a>
-        </div>
       </div>
       <div className="flex flex-col md:flex-row my-5">
         <div className="w-full md:w-5/12 mx-0 md:mx-5 ">
@@ -67,21 +66,21 @@ const WolfClosetSelectImage = () => {
               <img
                 src={background}
                 alt=""
-                className="h-[320px] w-full object-cover sm:h-[400px] absolute rounded-xl"
+                className="h-[350px] w-full object-cover sm:h-[400px] absolute rounded-xl"
               />
             )}
             {top != "" && (
               <img
                 src={top}
                 alt=""
-                className="h-[320px] w-full object-cover sm:h-[400px] absolute z-10"
+                className="h-[350px] w-full object-cover sm:h-[400px] absolute z-10"
               />
             )}
             {shirt != "" && (
               <img
                 src={shirt}
                 alt=""
-                className="h-[320px] w-full object-cover sm:h-[400px] absolute z-10"
+                className="h-[350px] w-full object-cover sm:h-[400px] absolute z-10"
               />
             )}
           </div>
@@ -89,11 +88,17 @@ const WolfClosetSelectImage = () => {
             <img
               src="https://cdn.discordapp.com/attachments/1048154925412130867/1048155161031348255/base.PNG"
               alt=""
-              className="h-[320px] w-full object-cover sm:h-[400px]"
+              className="h-[350px] w-full object-cover sm:h-[400px]"
             />
           </div>
         </div>
         <div className="block md:hidden flex flex-row justify-center my-5">
+          <div
+            className="hover:bg-[#5051E2] hover:text-white rounded-lg items-center py-3 px-2 cursor-pointer "
+            onClick={() => nextPageNumber("1")}
+          >
+            <a className="text-xl px-2">Background</a>
+          </div>
           <div
             className="hover:bg-[#5051E2] hover:text-white rounded-lg items-center py-3 px-2 cursor-pointer"
             onClick={() => nextPageNumber("3")}
@@ -105,13 +110,6 @@ const WolfClosetSelectImage = () => {
             onClick={() => nextPageNumber("2")}
           >
             <a className="text-xl px-2">Shirt</a>
-          </div>
-
-          <div
-            className="hover:bg-[#5051E2] hover:text-white rounded-lg items-center py-3 px-2 cursor-pointer "
-            onClick={() => nextPageNumber("1")}
-          >
-            <a className="text-xl px-2">Background</a>
           </div>
         </div>
         {
