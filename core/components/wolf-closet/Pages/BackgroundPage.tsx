@@ -6,7 +6,7 @@ export const BackgroundPage = ({ handleSetBackground }: any) => {
       {Closet.map((item) => {
         if (item.type === "background") {
           return (
-            <div className="border-2 rounded-xl md:transform md:transition md:duration-300 md:hover:scale-110">
+            <div className="border-2 rounded-xl md:transform md:transition md:duration-300 md:hover:scale-110  active:border-blue-700">
               <img
                 src={item.link}
                 alt=""
