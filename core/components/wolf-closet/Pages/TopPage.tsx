@@ -3,17 +3,20 @@ import Closet from "core/constants/Closet.json";
 export const TopPage = ({ handleSetTop }: any) => {
   return (
     <div className="grid grid-cols-2 md:grid-cols-4 grid-rows-2 gap-2 w-full md:w-9/12  ">
-      {Closet.map((item) => {
+      {Closet.map((item, index) => {
         if (item.type === "top") {
           return (
-            <div className="border-2 rounded-xl md:transform md:transition md:duration-300 md:hover:scale-110 active:border-blue-700">
+            <button
+              key={index}
+              className="border-2 rounded-xl md:transform md:transition md:duration-300 md:hover:scale-110 active:border-blue-500/50 focus:outline-none focus:ring focus:ring-blue-500/50"
+              onClick={() => handleSetTop(item.link)}
+            >
               <img
                 src={item.link}
                 alt=""
                 className="h-[200px] w-full cursor-pointer"
-                onClick={() => handleSetTop(item.link)}
               />
-            </div>
+            </button>
           );
         }
       })}
