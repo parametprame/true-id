@@ -41,34 +41,34 @@ const WolfClosetSelectImage = () => {
     return (
       <>
         <div
-          className="hover:bg-[#5051E2] hover:text-white rounded-lg items-center py-3 px-2 cursor-pointer "
+          className="px-2 py-2 md:py-3 md:px-5 hover:bg-[#5051E2] hover:text-white rounded-lg items-center cursor-pointer "
           onClick={() => nextPageNumber("1")}
           style={{
             backgroundColor: page === "pageone" ? "#5051E2" : "",
             color: page === "pageone" ? "#ffff" : "",
           }}
         >
-          <a className="text-xl px-2">Background</a>
+          <a className="text-sm md:text-xl">Background</a>
         </div>
         <div
-          className="hover:bg-[#5051E2] hover:text-white rounded-lg items-center py-3 px-2 cursor-pointer"
+          className="px-2 py-2 md:py-3 md:px-5 hover:bg-[#5051E2] hover:text-white rounded-lg items-center cursor-pointer "
           onClick={() => nextPageNumber("3")}
           style={{
             backgroundColor: page === "pagethree" ? "#5051E2" : "",
             color: page === "pagethree" ? "#ffff" : "",
           }}
         >
-          <a className="text-xl px-2">Top</a>
+          <a className="text-sm md:text-xl">Top</a>
         </div>
         <div
-          className="hover:bg-[#5051E2] hover:text-white rounded-lg items-center py-3 px-2 cursor-pointer "
+          className="px-2 py-2 md:py-3 md:px-5 hover:bg-[#5051E2] hover:text-white rounded-lg items-center cursor-pointer "
           onClick={() => nextPageNumber("2")}
           style={{
             backgroundColor: page === "pagetwo" ? "#5051E2" : "",
             color: page === "pagetwo" ? "#ffff" : "",
           }}
         >
-          <a className="text-xl px-2">Shirt</a>
+          <a className="text-sm md:text-xl">Shirt</a>
         </div>
       </>
     );
