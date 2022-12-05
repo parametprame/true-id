@@ -1,8 +1,11 @@
+import { IconContext } from "react-icons";
+import { MdGTranslate } from "react-icons/md";
+
 export const Topbar = () => {
   return (
     <header aria-label="Site Header" className="bg-white">
-      <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-2">
-        <div className="flex h-16 items-center justify-between">
+      <div className="px-4 sm:px-6 lg:px-2 shadow-md">
+        <div className="flex h-16 md:h-24 items-center justify-between mx-auto max-w-screen-2xl">
           <div className="flex-1 md:flex md:items-center md:gap-12">
             <a className="block text-teal-600" href="/">
               <span className="sr-only">Home</span>
@@ -22,10 +25,10 @@ export const Topbar = () => {
 
           <div className="md:flex md:items-center md:gap-12">
             <nav aria-label="Site Nav" className="hidden md:block">
-              <ul className="flex items-center gap-6 text-sm">
+              <ul className="flex items-center gap-6 text-base">
                 <li>
                   <a
-                    className="text-gray-500 transition hover:text-gray-500/75"
+                    className="text-black transition hover:text-black/75"
                     href="/"
                   >
                     Home
@@ -34,7 +37,7 @@ export const Topbar = () => {
 
                 <li>
                   <a
-                    className="text-gray-500 transition hover:text-gray-500/75"
+                    className="text-black transition hover:text-black/75"
                     href="/"
                   >
                     Wolf Closet
@@ -43,7 +46,7 @@ export const Topbar = () => {
 
                 <li>
                   <a
-                    className="text-gray-500 transition hover:text-gray-500/75"
+                    className="text-black transition hover:text-black/75"
                     href="/"
                   >
                     Mission
@@ -53,9 +56,23 @@ export const Topbar = () => {
             </nav>
 
             <div className="flex items-center gap-4">
+              <div className="sm:flex sm:gap-4 md:block hidden">
+                <button
+                  type="button"
+                  className="text-black bg-white hover:bg-gray-100 font-medium rounded-md text-sm px-5 py-2.5 text-center inline-flex items-center"
+                >
+                  <IconContext.Provider
+                    value={{ color: "#5E5F61", size: "20" }}
+                  >
+                    <MdGTranslate className="mr-2"/>
+                  </IconContext.Provider>
+                  English
+                </button>
+              </div>
+
               <div className="sm:flex sm:gap-4">
                 <a
-                  className="rounded-md bg-teal-600 px-5 py-2.5 text-sm font-medium text-white shadow"
+                  className="rounded-md bg-gradient-to-r from-[#59cad1] via-[#6267f0] to-[#d462f0] hover:opacity-80 px-5 py-2.5 text-sm font-medium text-white shadow"
                   href="/"
                 >
                   Connect Wallet
