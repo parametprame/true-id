@@ -1,13 +1,26 @@
 import { BackgroundPage } from "core/components/wolf-closet/Pages/BackgroundPage";
 import { ShirtPage } from "core/components/wolf-closet/Pages/ShirtPage";
 import { TopPage } from "core/components/wolf-closet/Pages/TopPage";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import html2canvas from "html2canvas";
 
-const WolfClosetSelectImage = () => {
+const WolfClosetSelectImage = ({ baseImage }: any) => {
   const [page, setPage] = useState("pageone");
   const [background, setBackground] = useState("");
   const [top, setTop] = useState("");
   const [shirt, setShirt] = useState("");
+
+  const screenShot = () => {
+    const element = document.getElementById("image") as HTMLElement;
+    html2canvas(element, { useCORS: true }).then((canvas) => {
+      const image = canvas.toDataURL("png");
+      const a = document.createElement("a");
+      a.setAttribute("download", "profile.png");
+      a.setAttribute("href", image);
+      a.click();
+      // document.body.appendChild(canvas);
+    });
+  };
 
   const nextPageNumber = (pageNumber: string) => {
     switch (pageNumber) {
@@ -81,37 +94,40 @@ const WolfClosetSelectImage = () => {
       </div>
       <div className="flex flex-col md:flex-row my-5">
         <div className="w-full md:w-5/12 mx-0 md:mx-5 ">
-          <div className="relative">
-            {background !== "" && (
+          <div>
+            <div className="relative">
+              {background !== "" && (
+                <img
+                  src={background}
+                  alt=""
+                  className="h-[200px] md:h-[300px] lg:h-[430px] w-full object-contain md:object-cover absolute rounded-xl"
+                />
+              )}
+              {top != "" && (
+                <img
+                  src={top}
+                  alt=""
+                  className="h-[200px] md:h-[300px] lg:h-[430px] w-full object-contain md:object-cover absolute z-10"
+                />
+              )}
+              {shirt != "" && (
+                <img
+                  src={shirt}
+                  alt=""
+                  className="h-[200px] md:h-[300px] lg:h-[430px] w-full object-contain md:object-cover absolute z-10"
+                />
+              )}
+            </div>
+            <div id="image" className="relative">
               <img
-                src={background}
+                src={baseImage[0].pathFile}
                 alt=""
-                className="h-[200px] md:h-[300px] lg:h-[430px] w-full object-contain md:object-cover absolute rounded-xl"
+                className="h-[200px] md:h-[300px] lg:h-[430px]  w-full object-contain md:object-cover "
               />
-            )}
-            {top != "" && (
-              <img
-                src={top}
-                alt=""
-                className="h-[200px] md:h-[300px] lg:h-[430px] w-full object-contain md:object-cover absolute z-10"
-              />
-            )}
-            {shirt != "" && (
-              <img
-                src={shirt}
-                alt=""
-                className="h-[200px] md:h-[300px] lg:h-[430px] w-full object-contain md:object-cover absolute z-10"
-              />
-            )}
-          </div>
-          <div className="relative">
-            <img
-              src="https://cdn.discordapp.com/attachments/1048154925412130867/1048155161031348255/base.PNG"
-              alt=""
-              className="h-[200px] md:h-[300px] lg:h-[430px]  w-full object-contain md:object-cover "
-            />
+            </div>
           </div>
         </div>
+        <button onClick={screenShot}>ดาวน์โหลด</button>
         <div className="block md:hidden flex flex-row justify-center my-5">
           <ManuCloset />
         </div>
