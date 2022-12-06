@@ -1,7 +1,1 @@
-export {};
-
-declare global {
-  interface Window {
-    saveAs: any;
-  }
-}
+// declare module "fabric";
