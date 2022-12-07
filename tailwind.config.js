@@ -6,7 +6,11 @@ module.exports = {
     "./core/**/*.tsx",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        nunito: ["Nunito", "sans-serif"],
+      },
+    },
   },
   plugins: [],
 };
