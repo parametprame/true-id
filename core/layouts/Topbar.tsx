@@ -47,7 +47,7 @@ export const Topbar = () => {
                 </li>
 
                 <li>
-                  <Link href="/">
+                  <Link href="/missions">
                     <p className="text-gray-500 transition hover:text-gray-500/75">
                       Mission
                     </p>
@@ -130,7 +130,7 @@ export const Topbar = () => {
                   </a>
                 </Link>
                 <Link
-                  href="/"
+                  href="/missions"
                   className="block py-2 pr-4 pl-3 text-dark hover:bg-gray-300 rounded "
                   legacyBehavior
                 >
