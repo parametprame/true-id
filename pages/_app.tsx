@@ -21,7 +21,7 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
     <>
       <ContextProvider>
         <Head>
-          {/* <link rel="shortcut icon" href="/assets/token.png" /> */}
+          <link rel="shortcut icon" href="/assets/logo.png" />
           <title>TRUE ID</title>
         </Head>
         <Layout>

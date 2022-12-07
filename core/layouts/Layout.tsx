@@ -8,7 +8,9 @@ const Layout = ({ children }: Props) => {
   return (
     <div className="font-nunito">
       <Topbar />
-      {children}
+      <div className="px-4 sm:px-6 lg:px-2 mx-auto max-w-screen-2xl">
+        {children}
+      </div>
     </div>
   );
 };
