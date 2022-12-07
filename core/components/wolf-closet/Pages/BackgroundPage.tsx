@@ -1,9 +1,9 @@
-import useSWR from "swr";
 import { fetcher } from "core/utils";
 import { useUserContext } from "core/context/store";
+import useSWRImmutable from "swr/immutable";
 
 export const BackgroundPage = () => {
-  const { data, error } = useSWR(
+  const { data, error } = useSWRImmutable(
     "https://true-id-backend.fly.dev/asset/type?typeId=background",
     fetcher
   );
@@ -11,12 +11,17 @@ export const BackgroundPage = () => {
   const { setUserInfo } = useUserContext();
 
   if (error) return <div>failed to load</div>;
-  if (!data) return <div>loading...</div>;
+  if (!data)
+    return (
+      <div className="w-full md:w-9/12 h-80 md:h-full overflow-y-auto text-center">
+        Loading...
+      </div>
+    );
 
   return (
     <div className="w-full md:w-9/12 h-80 md:h-full overflow-y-auto">
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 grid-rows-2 gap-2 mx-2 my-2">
-        {data.map((item: any, index: any) => {
+        {data?.map((item: any, index: any) => {
           return (
             <button
               key={index}
@@ -24,12 +29,12 @@ export const BackgroundPage = () => {
               onClick={() =>
                 setUserInfo((prev) => ({
                   ...prev,
-                  bg: item.pathFile,
+                  bg: item.url,
                 }))
               }
             >
               <img
-                src={item.pathFile}
+                src={item.url}
                 alt=""
                 className="h-[150px] md:h-[200px] w-full rounded-xl "
               />

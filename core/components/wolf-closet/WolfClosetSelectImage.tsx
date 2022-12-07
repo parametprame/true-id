@@ -10,8 +10,6 @@ const WolfClosetSelectImage = () => {
 
   const { userInfo } = useUserContext();
 
-  const timestamp = new Date().getTime();
-
   const screenShot = () => {
     const element = document.getElementById("image") as HTMLElement;
     html2canvas(element, {
@@ -86,34 +84,30 @@ const WolfClosetSelectImage = () => {
             <div className="relative">
               {userInfo.bg !== "" && (
                 <img
-                  src={userInfo.bg + `?v=${timestamp}`}
+                  src={userInfo.bg}
                   alt=""
                   className="h-[200px] md:h-[300px] lg:h-[430px] w-full object-contain md:object-cover absolute rounded-xl"
-                  crossOrigin="anonymous"
                 />
               )}
               {userInfo.top != "" && (
                 <img
-                  src={userInfo.top + `?v=${timestamp}`}
+                  src={userInfo.top}
                   alt=""
                   className="h-[200px] md:h-[300px] lg:h-[430px] w-full object-contain md:object-cover absolute z-10"
-                  crossOrigin="anonymous"
                 />
               )}
               {userInfo.shirt != "" && (
                 <img
-                  src={userInfo.shirt + `?v=${timestamp}`}
+                  src={userInfo.shirt}
                   alt=""
                   className="h-[200px] md:h-[300px] lg:h-[430px] w-full object-contain md:object-cover absolute z-10"
-                  crossOrigin="anonymous"
                 />
               )}
             </div>
             <div className="relative">
               <img
-                src={userInfo.base + `?v=${timestamp}`}
+                src={userInfo.base}
                 alt="base image"
-                crossOrigin="anonymous"
                 className="h-[200px] md:h-[300px] lg:h-[430px]  w-full object-contain md:object-cover"
               />
             </div>

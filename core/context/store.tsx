@@ -7,6 +7,7 @@ import {
   ReactNode,
   SetStateAction,
 } from "react";
+import baseImage from "core/constants/BaseImage.json";
 
 type Props = {
   children: ReactNode;
@@ -28,7 +29,7 @@ const Context = createContext({} as ContextProps);
 
 export function ContextProvider({ children }: Props): ReactElement {
   const [userInfo, setUserInfo] = useState<UserInfo>({
-    base: "https://image-true-id.s3.ap-northeast-1.amazonaws.com/eac5af25-8474-4037-a1ab-163e58ebb842-base.PNG",
+    base: baseImage[0].base,
     bg: "",
     top: "",
     shirt: "",
