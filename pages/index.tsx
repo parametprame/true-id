@@ -1,5 +1,6 @@
 import type { NextPageWithLayout } from "./_app";
 import Image from "next/image";
+import ScrollCarousel from "../core/components/home/ScrollCarousel";
 
 const Home: NextPageWithLayout = () => {
   return (
@@ -156,6 +157,7 @@ const Home: NextPageWithLayout = () => {
               WHO DO YOU WANT TO BE ?
             </p>
             {/* TODO: Image Slide */}
+            <ScrollCarousel />
           </div>
         </div>
       </div>

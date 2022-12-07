@@ -10,6 +10,20 @@ module.exports = {
       fontFamily: {
         nunito: ["Nunito", "sans-serif"],
       },
+      animation: {
+        "marquee-infinite-l": "slidetoleft 10s linear infinite",
+        "marquee-infinite-r": "slidetoright 5s linear infinite",
+      },
+      keyframes: {
+        slidetoleft: {
+          "0%": { transform: "translate(0, 0)" },
+          "100%": { transform: "translate(-50%, 0)" },
+        },
+        slidetoright: {
+          "0%": { transform: "translate(0, 0)" },
+          "100%": { transform: "translate(50%, 0)" },
+        },
+      },
     },
   },
   plugins: [],
