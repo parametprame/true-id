@@ -11,7 +11,7 @@ module.exports = {
         nunito: ["Nunito", "sans-serif"],
       },
       animation: {
-        "marquee-infinite-l": "slidetoleft 10s linear infinite",
+        "marquee-infinite-l": "slidetoleft 5s linear infinite",
         "marquee-infinite-r": "slidetoright 5s linear infinite",
       },
       keyframes: {
