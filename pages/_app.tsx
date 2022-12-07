@@ -4,6 +4,7 @@ import type { NextPage } from "next";
 import type { ReactElement, ReactNode } from "react";
 import Head from "next/head";
 import Layout from "core/layouts/Layout";
+import { ContextProvider } from "core/context/store";
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactNode;
@@ -18,13 +19,15 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
 
   return getLayout(
     <>
-      <Head>
-        {/* <link rel="shortcut icon" href="/assets/token.png" /> */}
-        <title>TRUE ID</title>
-      </Head>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <ContextProvider>
+        <Head>
+          {/* <link rel="shortcut icon" href="/assets/token.png" /> */}
+          <title>TRUE ID</title>
+        </Head>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </ContextProvider>
     </>
   );
 }
