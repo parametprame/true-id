@@ -29,21 +29,6 @@ const ScrollCarousel = () => {
               src="https://media.istockphoto.com/id/1132041859/fr/photo/vue-sur-la-ligne-dhorizon-de-hong-kong.jpg?s=170667a&w=0&k=20&c=2rwU2S8sPvstPp_JSMC1qQ12tfPV5rHboTGs4jCGsMs="
               alt=""
             />
-            <img
-              className="px-1 py-0"
-              src="https://thumbs.dreamstime.com/b/coucher-du-soleil-de-hong-kong-25693227.jpg"
-              alt=""
-            />
-            <img
-              className="px-1 py-0"
-              src="https://c4.wallpaperflare.com/wallpaper/283/258/480/cityscapes-hong-kong-wallpaper-preview.jpg"
-              alt=""
-            />
-            <img
-              className="px-1 py-0"
-              src="https://external-preview.redd.it/aXBKArS0hH_aFPOJRICd4sg8gEjmnATMwz8swQvWyuI.jpg?auto=webp&s=136b487ca97162c680ce0698d847536da9ae8c6b"
-              alt=""
-            />
           </div>
         </div>
         <div className="flex left-0 animate-marquee-infinite-r">
@@ -71,21 +56,6 @@ const ScrollCarousel = () => {
             <img
               className="px-1 py-0"
               src="https://media.istockphoto.com/id/1132041859/fr/photo/vue-sur-la-ligne-dhorizon-de-hong-kong.jpg?s=170667a&w=0&k=20&c=2rwU2S8sPvstPp_JSMC1qQ12tfPV5rHboTGs4jCGsMs="
-              alt=""
-            />
-            <img
-              className="px-1 py-0"
-              src="https://thumbs.dreamstime.com/b/coucher-du-soleil-de-hong-kong-25693227.jpg"
-              alt=""
-            />
-            <img
-              className="px-1 py-0"
-              src="https://c4.wallpaperflare.com/wallpaper/283/258/480/cityscapes-hong-kong-wallpaper-preview.jpg"
-              alt=""
-            />
-            <img
-              className="px-1 py-0"
-              src="https://external-preview.redd.it/aXBKArS0hH_aFPOJRICd4sg8gEjmnATMwz8swQvWyuI.jpg?auto=webp&s=136b487ca97162c680ce0698d847536da9ae8c6b"
               alt=""
             />
           </div>
