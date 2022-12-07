@@ -2,12 +2,29 @@ import { BackgroundPage } from "core/components/wolf-closet/Pages/BackgroundPage
 import { ShirtPage } from "core/components/wolf-closet/Pages/ShirtPage";
 import { TopPage } from "core/components/wolf-closet/Pages/TopPage";
 import { useState } from "react";
+import html2canvas from "html2canvas";
+import { useUserContext } from "core/context/store";
 
 const WolfClosetSelectImage = () => {
   const [page, setPage] = useState("pageone");
-  const [background, setBackground] = useState("");
-  const [top, setTop] = useState("");
-  const [shirt, setShirt] = useState("");
+
+  const { userInfo } = useUserContext();
+
+  const screenShot = () => {
+    const element = document.getElementById("image") as HTMLElement;
+    html2canvas(element, {
+      allowTaint: false,
+      useCORS: true,
+      scale: 2,
+      backgroundColor: null,
+    }).then((canvas) => {
+      let image = canvas.toDataURL("image/png");
+      const a = document.createElement("a");
+      a.setAttribute("download", "profile.png");
+      a.setAttribute("href", image);
+      a.click();
+    });
+  };
 
   const nextPageNumber = (pageNumber: string) => {
     switch (pageNumber) {
@@ -25,48 +42,30 @@ const WolfClosetSelectImage = () => {
     }
   };
 
-  const handleSetBackground = (item: string) => {
-    setBackground(item);
-  };
-
-  const handleSetTop = (item: string) => {
-    setTop(item);
-  };
-
-  const handleSetShirt = (item: string) => {
-    setShirt(item);
-  };
-
   const ManuCloset = () => {
     return (
       <>
         <div
-          className="hover:bg-[#5051E2] hover:text-white rounded-lg items-center py-3 px-2 cursor-pointer "
+          className={`${
+            page === "pageone" ? "bg-slate-300 " : ""
+          } hover:bg-slate-300  rounded-full items-center py-3 px-2 cursor-pointer `}
           onClick={() => nextPageNumber("1")}
-          style={{
-            backgroundColor: page === "pageone" ? "#5051E2" : "",
-            color: page === "pageone" ? "#ffff" : "",
-          }}
         >
           <a className="text-xl px-2">Background</a>
         </div>
         <div
-          className="hover:bg-[#5051E2] hover:text-white rounded-lg items-center py-3 px-2 cursor-pointer"
+          className={`${
+            page === "pagethree" ? "bg-slate-300 " : ""
+          } hover:bg-slate-300  rounded-full items-center py-3 px-2 cursor-pointer `}
           onClick={() => nextPageNumber("3")}
-          style={{
-            backgroundColor: page === "pagethree" ? "#5051E2" : "",
-            color: page === "pagethree" ? "#ffff" : "",
-          }}
         >
           <a className="text-xl px-2">Top</a>
         </div>
         <div
-          className="hover:bg-[#5051E2] hover:text-white rounded-lg items-center py-3 px-2 cursor-pointer "
+          className={`${
+            page === "pagetwo" ? "bg-slate-300 " : ""
+          } hover:bg-slate-300  rounded-full items-center py-3 px-2 cursor-pointer `}
           onClick={() => nextPageNumber("2")}
-          style={{
-            backgroundColor: page === "pagetwo" ? "#5051E2" : "",
-            color: page === "pagetwo" ? "#ffff" : "",
-          }}
         >
           <a className="text-xl px-2">Shirt</a>
         </div>
@@ -81,47 +80,56 @@ const WolfClosetSelectImage = () => {
       </div>
       <div className="flex flex-col md:flex-row my-5">
         <div className="w-full md:w-5/12 mx-0 md:mx-5 ">
-          <div className="relative">
-            {background !== "" && (
+          <div id="image" className="bg-transparent overflow-hidden">
+            <div className="relative">
+              {userInfo.bg !== "" && (
+                <img
+                  src={userInfo.bg}
+                  alt=""
+                  className="h-[200px] md:h-[300px] lg:h-[430px] w-full object-contain md:object-cover absolute rounded-xl"
+                />
+              )}
+              {userInfo.top != "" && (
+                <img
+                  src={userInfo.top}
+                  alt=""
+                  className="h-[200px] md:h-[300px] lg:h-[430px] w-full object-contain md:object-cover absolute z-10"
+                />
+              )}
+              {userInfo.shirt != "" && (
+                <img
+                  src={userInfo.shirt}
+                  alt=""
+                  className="h-[200px] md:h-[300px] lg:h-[430px] w-full object-contain md:object-cover absolute z-10"
+                />
+              )}
+            </div>
+            <div className="relative">
               <img
-                src={background}
-                alt=""
-                className="h-[200px] md:h-[300px] lg:h-[430px] w-full object-contain md:object-cover absolute rounded-xl"
+                src={userInfo.base}
+                alt="base image"
+                className="h-[200px] md:h-[300px] lg:h-[430px]  w-full object-contain md:object-cover"
               />
-            )}
-            {top != "" && (
-              <img
-                src={top}
-                alt=""
-                className="h-[200px] md:h-[300px] lg:h-[430px] w-full object-contain md:object-cover absolute z-10"
-              />
-            )}
-            {shirt != "" && (
-              <img
-                src={shirt}
-                alt=""
-                className="h-[200px] md:h-[300px] lg:h-[430px] w-full object-contain md:object-cover absolute z-10"
-              />
-            )}
+            </div>
           </div>
-          <div className="relative">
-            <img
-              src="https://cdn.discordapp.com/attachments/1048154925412130867/1048155161031348255/base.PNG"
-              alt=""
-              className="h-[200px] md:h-[300px] lg:h-[430px]  w-full object-contain md:object-cover "
-            />
+          <div className="flex justify-center mt-5">
+            <button
+              className="bg-[#E2211C] px-5 py-2 rounded-full text-white font-normal hover:bg-[#f55e5b]"
+              onClick={screenShot}
+            >
+              Save Profile
+            </button>
           </div>
         </div>
+
         <div className="block md:hidden flex flex-row justify-center my-5">
           <ManuCloset />
         </div>
         {
           {
-            pageone: (
-              <BackgroundPage handleSetBackground={handleSetBackground} />
-            ),
-            pagetwo: <ShirtPage handleSetShirt={handleSetShirt} />,
-            pagethree: <TopPage handleSetTop={handleSetTop} />,
+            pageone: <BackgroundPage />,
+            pagetwo: <ShirtPage />,
+            pagethree: <TopPage />,
           }[page]
         }
       </div>
