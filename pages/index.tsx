@@ -174,7 +174,7 @@ const Home: NextPageWithLayout = () => {
             </p>
             <div className="space-y-4 mx-auto max-w-6xl p-4">
               <details
-                className="group rounded-2xl bg-white p-6 text-black md:min-w-[700px] md:max-w-[700px]"
+                className="group rounded-2xl bg-white p-3 md:p-6 text-black md:min-w-[700px] md:max-w-[700px]"
                 open
               >
                 <summary className="flex cursor-pointer items-center justify-between">
@@ -222,7 +222,7 @@ const Home: NextPageWithLayout = () => {
                 </p>
               </details>
 
-              <details className="group rounded-2xl bg-white p-6 text-black md:min-w-[700px] md:max-w-[700px]">
+              <details className="group rounded-2xl bg-white p-3 md:p-6 text-black md:min-w-[700px] md:max-w-[700px]">
                 <summary className="flex cursor-pointer items-center justify-between">
                   <h2 className="font-medium text-lg md:text-2xl">
                     How to create wallet ?
@@ -269,7 +269,7 @@ const Home: NextPageWithLayout = () => {
                 </p>
               </details>
 
-              <details className="group rounded-2xl bg-white p-6 text-black md:min-w-[700px] md:max-w-[700px]">
+              <details className="group rounded-2xl bg-white p-3 md:p-6 text-black md:min-w-[700px] md:max-w-[700px]">
                 <summary className="flex cursor-pointer items-center justify-between">
                   <h2 className="font-medium text-lg md:text-2xl	">
                     How to buy and sell passes ?{" "}
@@ -316,7 +316,7 @@ const Home: NextPageWithLayout = () => {
                 </p>
               </details>
 
-              <details className="group rounded-2xl bg-white p-6 text-black md:min-w-[700px] md:max-w-[700px]">
+              <details className="group rounded-2xl bg-white p-3 md:p-6 text-black md:min-w-[700px] md:max-w-[700px]">
                 <summary className="flex cursor-pointer items-center justify-between">
                   <h2 className="font-medium text-lg md:text-2xl">
                     What usage right will I have for my NFTs ?
