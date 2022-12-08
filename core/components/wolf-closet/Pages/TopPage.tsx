@@ -23,7 +23,7 @@ export const TopPage = () => {
           return (
             <button
               key={index}
-              className="border-2 rounded-xl md:transform md:transition md:duration-300 md:hover:scale-110 active:border-blue-500/50 focus:outline-none focus:ring focus:ring-blue-500/50"
+              className="bg-white border-2 rounded-xl md:transform md:transition md:duration-300 md:hover:scale-110 active:border-blue-500/50 focus:outline-none focus:ring focus:ring-blue-500/50"
               onClick={() =>
                 setUserInfo((prev) => ({
                   ...prev,

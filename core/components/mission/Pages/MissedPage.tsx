@@ -6,7 +6,7 @@ export const MissedPage = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 py-5">
         {mockId.map((item) => {
           return (
-            <div className="flex h-max bg-slate-300 rounded-2xl  grayscale">
+            <div className="flex h-max bg-slate-300 rounded-2xl grayscale text-black">
               <div className="w-7/12 md:w-7/12 mx-0 md:mx-5">
                 <div className="flex flex-col py-3 px-5 md:px-0">
                   <p className="font-bold text-sm ">TrueID</p>

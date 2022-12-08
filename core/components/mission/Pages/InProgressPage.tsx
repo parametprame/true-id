@@ -9,7 +9,7 @@ export const InProgressPage = () => {
         {mockId.map((item) => {
           return (
             <Link href={`/missions/${item}`} key={item}>
-              <div className="flex h-max bg-slate-300 rounded-2xl md:transform md:transition md:duration-300 md:hover:scale-110	cursor-pointer">
+              <div className="flex h-max bg-slate-300 rounded-2xl md:transform md:transition md:duration-300 md:hover:scale-110	cursor-pointer text-black">
                 <div className="w-7/12 md:w-7/12 mx-0 md:mx-5">
                   <div className="flex flex-col py-3 px-5 md:px-0">
                     <p className="font-bold text-sm ">TrueID</p>
