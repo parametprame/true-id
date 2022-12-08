@@ -215,17 +215,10 @@ const Home: NextPageWithLayout = () => {
                 </summary>
 
                 <p className="mt-4 leading-relaxed">
-                  NFT staking is depositing NFTs in a blockchain network and
-                  receiving rewards for it for not selling the NFTs while they
-                  are staked.
-                </p>
-                <p className="mt-2 leading-relaxed">
-                  Oppa Bear NFTs can be staked in Oppa Bear Staking platform to
-                  earn rewards without having to sell the NFTs. It works like a
-                  time deposit bank account: you deposit NFTs a certain amount
-                  of money and you will earn interest, OPB Token, on it. In NFT
-                  staking, instead of depositing money, you deposit NFTs and you
-                  will be compensated for earning OPB Token.
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Ipsam labore tenetur eaque dolore? Aspernatur nobis facere
+                  neque ullam nam autem, sint temporibus sapiente molestiae
+                  alias, suscipit voluptatum non a minus?
                 </p>
               </details>
 
@@ -269,15 +262,10 @@ const Home: NextPageWithLayout = () => {
                 </summary>
 
                 <p className="mt-4 leading-relaxed">
-                  Oppa Bear NFT staking is a new concept that you will earn the
-                  token as the time you stake Oppa Bear NFT. The longer time you
-                  stake, the higher rewards you will get. Also, the lower number
-                  of NFT staking in the pool, the higher rewards you earn.
-                </p>
-                <p className="mt-2 leading-relaxed">
-                  You are eligible to claim and collect the OPB Tokens once you
-                  stake your Oppa Bear NFTs in a certain period of time after
-                  staking 15 days.
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Ipsam labore tenetur eaque dolore? Aspernatur nobis facere
+                  neque ullam nam autem, sint temporibus sapiente molestiae
+                  alias, suscipit voluptatum non a minus?
                 </p>
               </details>
 
@@ -321,10 +309,10 @@ const Home: NextPageWithLayout = () => {
                 </summary>
 
                 <p className="mt-4 leading-relaxed">
-                  OPB Token is a token received from staking Oppa Bear NFTs in
-                  Oppa Bear staking platform. It can be used in numerous ways
-                  e.g. for discount in merch store, exchanging special limited
-                  NFT editions, discount from Oppa Bear&apos;s partnership, etc.
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Ipsam labore tenetur eaque dolore? Aspernatur nobis facere
+                  neque ullam nam autem, sint temporibus sapiente molestiae
+                  alias, suscipit voluptatum non a minus?
                 </p>
               </details>
 
@@ -368,10 +356,10 @@ const Home: NextPageWithLayout = () => {
                 </summary>
 
                 <p className="mt-4 leading-relaxed">
-                  The minium length of time for staking NFTs is 15 days. Please
-                  note that you can claim your NFTs back to your wallet only
-                  after 15 days of staking. After 15 days of staking, you are
-                  eligible to claim your OPB Token reward.
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Ipsam labore tenetur eaque dolore? Aspernatur nobis facere
+                  neque ullam nam autem, sint temporibus sapiente molestiae
+                  alias, suscipit voluptatum non a minus?
                 </p>
               </details>
             </div>
