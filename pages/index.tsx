@@ -47,7 +47,7 @@ const Home: NextPageWithLayout = () => {
             Wolf Door Passes are available for 20,000 - 10,000
           </p>
         </div>
-        <div className="my-4">
+        <div>
           <p className="text-2xl md:text-4xl font-bold text-center pb-5">
             Rarity
           </p>
@@ -59,7 +59,7 @@ const Home: NextPageWithLayout = () => {
               One Pass , Many mission to explore
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 content-center mt-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 content-center my-10 md:my-14">
             <div className="flex flex-col justify-center items-center">
               <div className="md:h-[240px] md:w-[430px] h-[100px] w-[230px] relative">
                 <Image
@@ -104,7 +104,7 @@ const Home: NextPageWithLayout = () => {
             </div>
           </div>
 
-          <p className="text-2xl md:text-4xl font-bold text-center pt-20 pb-10">
+          <p className="text-2xl md:text-4xl font-bold text-center pb-10">
             WOLF DOOR PRIVILEDGES
           </p>
           <div className="flex justify-center">
@@ -131,7 +131,7 @@ const Home: NextPageWithLayout = () => {
               </li>
             </ul>
           </div>
-          <div className="flex justify-center pt-12">
+          <div className="flex justify-center my-10 md:my-14">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-5 content-center">
               <img alt="Image" src="https://via.placeholder.com/100" />
               <img alt="Image" src="https://via.placeholder.com/100" />
@@ -139,7 +139,7 @@ const Home: NextPageWithLayout = () => {
               <img alt="Image" src="https://via.placeholder.com/100" />
             </div>
           </div>
-          <div className="pt-20 pb-10">
+          <div className="my-10 md:my-14">
             <div className="mb-3 md:mb-6">
               <p className="text-2xl md:text-4xl font-bold text-center ">
                 OWN YOUR LOOK
@@ -150,7 +150,7 @@ const Home: NextPageWithLayout = () => {
             </div>
             <ScrollCarousel />
           </div>
-          <div className="flex flex-col md:flex-row justify-center items-center pt-20 pb-10">
+          <div className="flex flex-col md:flex-row justify-center items-center my-10 md:my-14">
             <img src="/assets/otterpass.png" alt="otterpass" />
             <div className="flex flex-col w-full md:w-[630px] text-center justify-center items-center md:my-0 my-3">
               <p className="text-4xl md:text-6xl font-bold text-center">
@@ -168,7 +168,7 @@ const Home: NextPageWithLayout = () => {
               </button>
             </div>
           </div>
-          <div className="flex flex-col justify-center items-center pt-20 pb-10">
+          <div className="flex flex-col justify-center items-center my-10 md:my-14">
             <p className="text-4xl md:text-6xl font-bold text-center md:mb-6 mb-3">
               FAQ
             </p>
