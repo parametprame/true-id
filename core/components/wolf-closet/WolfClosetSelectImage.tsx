@@ -47,27 +47,45 @@ const WolfClosetSelectImage = () => {
       <>
         <div
           className={`${
-            page === "pageone" ? "bg-slate-300 " : ""
+            page === "pageone" ? "bg-white" : ""
           } hover:bg-slate-300  rounded-full items-center py-3 px-2 cursor-pointer `}
           onClick={() => nextPageNumber("1")}
         >
-          <a className="text-xl px-2">Background</a>
+          <a
+            className={`${
+              page === "pageone" ? "text-xl px-2 text-black" : ""
+            } text-xl px-2 text-white `}
+          >
+            Background
+          </a>
         </div>
         <div
           className={`${
-            page === "pagethree" ? "bg-slate-300 " : ""
+            page === "pagethree" ? "bg-white " : ""
           } hover:bg-slate-300  rounded-full items-center py-3 px-2 cursor-pointer `}
           onClick={() => nextPageNumber("3")}
         >
-          <a className="text-xl px-2">Top</a>
+          <a
+            className={`${
+              page === "pagethree" ? "text-xl px-2 text-black" : ""
+            } text-xl px-2 text-white `}
+          >
+            Top
+          </a>
         </div>
         <div
           className={`${
-            page === "pagetwo" ? "bg-slate-300 " : ""
+            page === "pagetwo" ? "bg-white" : ""
           } hover:bg-slate-300  rounded-full items-center py-3 px-2 cursor-pointer `}
           onClick={() => nextPageNumber("2")}
         >
-          <a className="text-xl px-2">Shirt</a>
+          <a
+            className={`${
+              page === "pagetwo" ? "text-xl px-2 text-black" : ""
+            } text-xl px-2 text-white `}
+          >
+            Shirt
+          </a>
         </div>
       </>
     );
