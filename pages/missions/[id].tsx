@@ -34,13 +34,13 @@ const MissionId = () => {
               Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet
               consecteturLorem ipsum dolor sit amet consectetur.Lorem ipsum
               Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet
-              consecteturLorem ipsum dolor sit amet consectetur.Lorem ipsum{" "}
+              consecteturLorem ipsum dolor sit amet consectetur.Lorem ipsum
             </p>
           </div>
         </div>
         <div className="flex justify-center w-full md:w-9/12 h-80 md:h-full ">
           <img
-            src="/assets/franc.png"
+            src="/assets/franc.jpg"
             alt="base image"
             className="h-[200px] md:h-[450px] w-auto object-contain rounded-3xl	"
           />

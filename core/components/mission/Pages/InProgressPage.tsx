@@ -36,7 +36,7 @@ export const InProgressPage = () => {
                 </div>
                 <div className="w-5/12 md:w-5/12 flex justify-center md:justify-end px-2 py-4 md:py-2">
                   <img
-                    src="assets/franc.png"
+                    src="assets/franc.jpg"
                     alt="base image"
                     className="rounded-2xl object-cover"
                   />
