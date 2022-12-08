@@ -1,7 +1,7 @@
 const MissionId = () => {
   return (
-    <section className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-2">
-      <div className="flex flex-col md:flex-row pt-10 mb-5 text-white">
+    <section className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-2 text-white">
+      <div className="flex flex-col md:flex-row pt-10  text-white">
         <div className="w-full md:w-5/12 py-5 md:py-0 mx-0 md:mx-5 order-2 md:order-1">
           <p className="text-3xl md:text-5xl font-bold">Watch to earn</p>
           <p className="text-2xl font-bold">powered by TrueID</p>
