@@ -16,7 +16,7 @@ export const AvailablePage = () => {
                     <p className="font-bold text-sm ">Watch to earn</p>
                     <p className="font-bold text-sm ">World Cup 2022 match</p>
                   </div>
-                  <div className="px-5 md:px-0">
+                  <div className="px-3 md:px-0">
                     <div className="w-full bg-black	rounded-full h-2.5 mt-1 mb-3 ">
                       <div
                         className="bg-[#E2211C] h-2.5 rounded-full"
@@ -25,18 +25,18 @@ export const AvailablePage = () => {
                       <p className="text-sm mt-1">1304/2500 Completed</p>
                     </div>
                   </div>
-                  <div className="flex flex-row pt-6 mb-2 justify-center">
-                    <div className="bg-white mr-2  px-1 py-1 md:px-5 md:py-2 rounded-2xl">
-                      <p className="text-sm">NFT</p>
+                  <div className="flex flex-row pt-6 mb-2 justify-around">
+                    <div className="bg-white md:px-0.5 md:py-1 lg:px-2 lg:py-2 rounded-2xl">
+                      <p className="text-sm px-1">NFT</p>
                     </div>
-                    <div className="bg-white ml-2 px-1 py-1 md:px-2 md:py-2  rounded-2xl">
-                      <p className="text-sm">DISCOUNT CODE</p>
+                    <div className="bg-white md:px-0.5 md:py-1 lg:px-2 lg:py-2 rounded-2xl">
+                      <p className="text-sm  px-1">DISCOUNT CODE</p>
                     </div>
                   </div>
                 </div>
-                <div className="w-5/12 md:w-5/12 flex justify-center md:justify-end px-2 py-4 md:py-2">
+                <div className="w-5/12 lg:w-5/12 flex justify-center md:justify-end px-2 py-4 md:py-2">
                   <img
-                    src="assets/franc.png"
+                    src="assets/franc.jpg"
                     alt="base image"
                     className="rounded-2xl object-cover"
                   />
