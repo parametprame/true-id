@@ -30,7 +30,7 @@ const Home: NextPageWithLayout = () => {
               Explore the 2nd sale market on....
             </p>
           </div>
-          <div className="order-1 md:order-2">
+          <div className="order-1 md:order-2 flex justify-center items-center">
             <div className="md:h-[500px] md:w-[500px] h-[250px] w-[250px] relative">
               <Image
                 src="/assets/franc.png"
