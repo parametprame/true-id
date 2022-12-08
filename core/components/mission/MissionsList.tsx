@@ -28,8 +28,8 @@ export const MissionList = () => {
 
   return (
     <>
-      <div className="w-full mt-12 flow-root md:flex md:justify-center overflow-x-auto">
-        <div className="flex flex-row justify-center w-max">
+      <div className="w-full mt-12 flex justify-center overflow-x-auto">
+        <div className="flex flex justify-center w-max">
           <div
             className="px-2 py-2 md:py-3 md:px-5 hover:bg-[#E2211C] hover:text-white rounded-full items-center cursor-pointer "
             onClick={() => nextPageNumber("1")}
@@ -38,7 +38,7 @@ export const MissionList = () => {
               color: page === "pageone" ? "#ffff" : "",
             }}
           >
-            <p className="text-sm md:text-xl">Available</p>
+            <p className="text-xs	 md:text-xl">Available</p>
           </div>
           <div
             className="px-2 py-2 md:py-3 md:px-5 hover:bg-[#E2211C] hover:text-white rounded-full items-center cursor-pointer "
@@ -48,7 +48,7 @@ export const MissionList = () => {
               color: page === "pagetwo" ? "#ffff" : "",
             }}
           >
-            <p className="text-sm md:text-xl">In Progress</p>
+            <p className="text-xs	 md:text-xl">In Progress</p>
           </div>
           <div
             className="px-2 py-2 md:py-3 md:px-5 hover:bg-[#E2211C] hover:text-white rounded-full items-center cursor-pointer "
@@ -58,7 +58,7 @@ export const MissionList = () => {
               color: page === "pagethree" ? "#ffff" : "",
             }}
           >
-            <p className="text-sm md:text-xl">Completed</p>
+            <p className="text-xs	 md:text-xl">Completed</p>
           </div>
           <div
             className="px-2 py-2 md:py-3 md:px-5 hover:bg-[#E2211C] hover:text-white rounded-full items-center cursor-pointer "
@@ -68,7 +68,7 @@ export const MissionList = () => {
               color: page === "pagefour" ? "#ffff" : "",
             }}
           >
-            <p className="text-sm md:text-xl">Missed</p>
+            <p className="text-xs	 md:text-xl">Missed</p>
           </div>
         </div>
       </div>
