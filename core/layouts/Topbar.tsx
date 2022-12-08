@@ -14,7 +14,7 @@ export const Topbar = () => {
 
   return (
     <>
-      <div className="px-4 sm:px-6 lg:px-2 shadow-md ">
+      <div className="px-4 sm:px-6 lg:px-2 shadow-md bg-black">
         <div className="flex h-16 md:h-24 items-center justify-between container mx-auto px-4">
           <Link href="/">
             <div className="relative h-12 sm:h-52 w-[100px]">
@@ -32,7 +32,7 @@ export const Topbar = () => {
               <ul className="flex items-center gap-6 text-sm">
                 <li>
                   <Link href="/">
-                    <p className="text-gray-500 transition hover:text-gray-500/75">
+                    <p className="text-white transition hover:text-gray-500/75">
                       Home
                     </p>
                   </Link>
@@ -40,7 +40,7 @@ export const Topbar = () => {
 
                 <li>
                   <Link href="/wolf-closet">
-                    <p className="text-gray-500 transition hover:text-gray-500/75">
+                    <p className="text-white transition hover:text-gray-500/75">
                       Wolf Closet
                     </p>
                   </Link>
@@ -48,7 +48,7 @@ export const Topbar = () => {
 
                 <li>
                   <Link href="/missions">
-                    <p className="text-gray-500 transition hover:text-gray-500/75">
+                    <p className="text-white transition hover:text-gray-500/75">
                       Mission
                     </p>
                   </Link>
@@ -59,7 +59,7 @@ export const Topbar = () => {
             <div className="flex items-center gap-4">
               <div className="sm:flex sm:gap-4">
                 <a
-                  className="rounded-md bg-[#E2211C] hover:bg-[#f55e5b] px-5 py-2.5 text-sm font-medium text-white shadow"
+                  className="rounded-md bg-gradient-to-r from-[#E2211C] to-[#FFDEDE] hover:from-[#E2211C]/90 hover:to-[#FFDEDE]/90 px-5 py-2.5 text-sm font-medium text-white shadow"
                   href="/"
                 >
                   Connect Wallet
