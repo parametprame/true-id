@@ -1,12 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Transition } from "@headlessui/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Modal } from "core/components/connect-wallet/Modal";
 
 export const Topbar = () => {
   const [open, setOpen] = useState<boolean>(false);
   const [modalOpen, setModalOpen] = useState<boolean>(false);
+  const [isConnect, setConnect] = useState<boolean>(false);
 
   const handleClick = () => {
     setOpen(!open);
@@ -15,6 +16,18 @@ export const Topbar = () => {
   const handleClose = () => {
     setModalOpen(!modalOpen);
   };
+
+  const handleConnectWallet = () => {
+    localStorage.setItem("connect", "true");
+    setConnect(true);
+  };
+
+  useEffect(() => {
+    const connect = localStorage.getItem("connect");
+    if (connect != null) {
+      setConnect(true);
+    }
+  }, []);
 
   return (
     <>
@@ -62,12 +75,18 @@ export const Topbar = () => {
 
             <div className="flex items-center gap-4">
               <div className="sm:flex sm:gap-4">
-                <button
-                  className="rounded-md bg-gradient-to-r from-[#E2211C] to-[#FFDEDE] hover:from-[#E2211C]/90 hover:to-[#FFDEDE]/90 px-5 py-2.5 text-sm font-medium text-white shadow"
-                  onClick={() => setModalOpen(true)}
-                >
-                  Connect Wallet
-                </button>
+                {isConnect ? (
+                  <p className="rounded-md bg-gradient-to-r from-[#E2211C] to-[#FFDEDE] hover:from-[#E2211C]/90 hover:to-[#FFDEDE]/90 px-5 py-2.5 text-sm font-medium text-white shadow">
+                    0xTasRasdUasdE...ID
+                  </p>
+                ) : (
+                  <button
+                    className="rounded-md bg-gradient-to-r from-[#E2211C] to-[#FFDEDE] hover:from-[#E2211C]/90 hover:to-[#FFDEDE]/90 px-5 py-2.5 text-sm font-medium text-white shadow"
+                    onClick={() => setModalOpen(true)}
+                  >
+                    Connect Wallet
+                  </button>
+                )}
               </div>
 
               <div className="block md:hidden">
@@ -94,7 +113,11 @@ export const Topbar = () => {
             </div>
           </div>
         </div>
-        <Modal onClose={handleClose} isOpen={modalOpen} />
+        <Modal
+          onClose={handleClose}
+          isOpen={modalOpen}
+          onConnect={handleConnectWallet}
+        />
       </div>
 
       <Transition

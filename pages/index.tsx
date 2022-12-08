@@ -30,8 +30,8 @@ const Home: NextPageWithLayout = () => {
               Explore the 2nd sale market on....
             </p>
           </div>
-          <div className="order-1 md:order-2 flex justify-center items-center">
-            <div className="md:h-[500px] md:w-[500px] h-[250px] w-[250px] relative">
+          <div className="order-1 md:order-2 flex  justify-center md:justify-end lg:justify-center items-center">
+            <div className="md:h-[280px] md:w-[280px] lg:h-[500px] lg:w-[500px] h-[250px] w-[250px] relative">
               <Image
                 src="/assets/franc.png"
                 alt="Picture of the author"
@@ -59,7 +59,7 @@ const Home: NextPageWithLayout = () => {
               One Pass , Many mission to explore
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 content-center my-10 md:my-14">
+          <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-10 content-center my-10 md:my-14">
             <div className="flex flex-col justify-center items-center">
               <div className="md:h-[240px] md:w-[430px] h-[100px] w-[230px] relative">
                 <Image

@@ -5,11 +5,18 @@ import Image from "next/image";
 
 interface Props {
   onClose: () => void;
+  onConnect: () => void;
   isOpen: boolean;
 }
 
-export const Modal = ({ onClose, isOpen }: Props) => {
+export const Modal = ({ onClose, isOpen, onConnect }: Props) => {
   const cancelButtonRef = useRef(null);
+
+  const handleConectWallet = () => {
+    onClose();
+    onConnect();
+  };
+
   return (
     <Transition.Root show={isOpen} as={Fragment}>
       <Dialog
@@ -58,13 +65,35 @@ export const Modal = ({ onClose, isOpen }: Props) => {
                     <div className=" mt-2 font-bold text-xl leading-tight">
                       Login
                     </div>
-                    <div className="w-auto md:w-96  text-base  rounded-3xl">
-                      <p className="py-2">
+                    <div className="w-auto md:w-96  text-base  rounded-3xl ">
+                      <p className="text-left md:text-left py-2 text-slate-400 pr-0 md:pr-10">
                         Please read the{" "}
-                        <span className="font-semibold">Privacy Notice</span> of
-                        the compant By logging in you are agreeing to the{" "}
-                        <span className="font-semibold">Terms of service.</span>
+                        <span className="font-semibold text-slate-600		">
+                          Privacy Notice
+                        </span>{" "}
+                        of the compant By logging in you are agreeing to the{" "}
+                        <span className="font-semibold text-slate-600		">
+                          Terms of service.
+                        </span>
                       </p>
+
+                      <button
+                        className="border w-full  rounded-lg hover:bg-gray-200"
+                        onClick={handleConectWallet}
+                      >
+                        <div className="flex flex-row  justify-center items-center">
+                          <div className="sticky h-7 w-10 my-2">
+                            <Image
+                              src="/assets/bitkub-logo.png"
+                              alt="Logo"
+                              layout="fill"
+                              objectFit="contain"
+                              priority
+                            />
+                          </div>
+                          <p className="my-2">Continue with Bitkub NEXT</p>
+                        </div>
+                      </button>
                     </div>
                   </div>
                 </div>
