@@ -1,15 +1,19 @@
-import { IconContext } from "react-icons";
-import { MdGTranslate } from "react-icons/md";
 import Link from "next/link";
 import Image from "next/image";
 import { Transition } from "@headlessui/react";
 import { useState } from "react";
+import { Modal } from "core/components/connect-wallet/Modal";
 
 export const Topbar = () => {
   const [open, setOpen] = useState<boolean>(false);
+  const [modalOpen, setModalOpen] = useState<boolean>(false);
 
   const handleClick = () => {
     setOpen(!open);
+  };
+
+  const handleClose = () => {
+    setModalOpen(!modalOpen);
   };
 
   return (
@@ -58,12 +62,12 @@ export const Topbar = () => {
 
             <div className="flex items-center gap-4">
               <div className="sm:flex sm:gap-4">
-                <a
+                <button
                   className="rounded-md bg-[#E2211C] hover:bg-[#f55e5b] px-5 py-2.5 text-sm font-medium text-white shadow"
-                  href="/"
+                  onClick={() => setModalOpen(true)}
                 >
                   Connect Wallet
-                </a>
+                </button>
               </div>
 
               <div className="block md:hidden">
@@ -90,6 +94,7 @@ export const Topbar = () => {
             </div>
           </div>
         </div>
+        <Modal onClose={handleClose} isOpen={modalOpen} />
       </div>
 
       <Transition
