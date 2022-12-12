@@ -49,7 +49,7 @@ const BuyPass = () => {
                 priority
               />
             </div>
-            <p className="text-center text-2xl font-bold py-10">Baby Wolf</p>
+            <p className="text-center text-2xl font-bold py-10">Wolf Citizen</p>
             <p className="text-center text-lg ">Price : 1,000 Baht</p>
             <p className="text-center text-xl font-bold py-5 md:mt-20">
               TOTAL : 3,500
@@ -73,7 +73,7 @@ const BuyPass = () => {
                 priority
               />
             </div>
-            <p className="text-center text-2xl font-bold py-10">Baby Wolf</p>
+            <p className="text-center text-2xl font-bold py-10">Alpha Wolf</p>
             <p className="text-center text-lg ">Price : 3,000 Baht</p>
             <p className="text-center text-xl font-bold py-5 md:mt-20">
               TOTAL : 500

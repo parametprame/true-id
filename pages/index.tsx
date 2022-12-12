@@ -91,7 +91,7 @@ const Home: NextPageWithLayout = () => {
                   priority
                 />
               </div>
-              <p className="text-center text-xl font-bold my-5">Master Wolf</p>
+              <p className="text-center text-xl font-bold my-5">Wolf Citizen</p>
               <p className="text-center text-xl font-bold">TOTAL : 3,500</p>
             </div>
 
@@ -105,7 +105,7 @@ const Home: NextPageWithLayout = () => {
                   priority
                 />
               </div>
-              <p className="text-center text-xl font-bold my-5">Captain Wolf</p>
+              <p className="text-center text-xl font-bold my-5">Alpha Wolf</p>
               <p className="text-center text-xl font-bold">TOTAL : 500</p>
             </div>
           </div>
