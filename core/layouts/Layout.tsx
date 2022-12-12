@@ -10,7 +10,7 @@ const Layout = ({ children }: Props) => {
     <div className="font-nunito">
       <Topbar />
       <Toat />
-      <div className="px-4 sm:px-6 lg:px-14 mx-auto max-w-screen-2xl bg-[#171717] min-h-screen">
+      <div className="px-4 sm:px-6 lg:px-14 mx-auto bg-[#171717] min-h-screen">
         {children}
       </div>
     </div>
