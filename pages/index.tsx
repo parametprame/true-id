@@ -1,6 +1,7 @@
 import type { NextPageWithLayout } from "./_app";
 import Image from "next/image";
 import ScrollCarousel from "../core/components/home/ScrollCarousel";
+import Link from "next/link";
 
 const Home: NextPageWithLayout = () => {
   return (
@@ -15,19 +16,24 @@ const Home: NextPageWithLayout = () => {
               Your pass to the new experience
             </p>
             <p className="text-base my-6 md:mt-6 text-white">
-              Lorem ipsum dolor sit amet consectetur. Ipsum semper id augue
-              sapien ullamcorper nulla turpis. At placerat eleifend ullamcorper
-              quis semper vestibulum bibendum consequat.
+              Win Missions - Have Fun - With TRUE ID
             </p>
 
-            <button
-              type="button"
-              className="w-[100px] md:w-[205px] text-white bg-gradient-to-br from-[#E2211C] to-[#FFDEDE] hover:from-[#E2211C]/90 hover:to-[#FFDEDE]/90 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2"
+            <Link
+              href="/buy-pass"
+              className="w-[200px] md:w-max text-white bg-gradient-to-br from-[#E2211C] to-[#FFDEDE] hover:from-[#E2211C]/90 hover:to-[#FFDEDE]/90 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-10 py-2.5 text-center mr-2 mb-2"
             >
               Buy Pass
-            </button>
-            <p className="text-base my-3 text-white">
-              Explore the 2nd sale market on....
+            </Link>
+            <p className="text-base my-5 text-white">
+              Explore the 2nd sale market on{" "}
+              <a
+                href=" https://www.megaland.io/"
+                target="_blank"
+                className="text-sky-600 underline underline-offset-2"
+              >
+                megaland
+              </a>
             </p>
           </div>
           <div className="order-1 md:order-2 flex  justify-center md:justify-end lg:justify-center items-center">
@@ -44,7 +50,7 @@ const Home: NextPageWithLayout = () => {
         </div>
         <div className="my-10 md:my-14">
           <p className="text-lg md:text-2xl font-bold text-center">
-            Wolf Door Passes are available for 20,000 - 10,000
+            Wolf Door Passes are available for 20,000
           </p>
         </div>
         <div>
@@ -61,9 +67,9 @@ const Home: NextPageWithLayout = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-10 content-center my-10 md:my-14">
             <div className="flex flex-col justify-center items-center">
-              <div className="md:h-[240px] md:w-[430px] h-[100px] w-[230px] relative">
+              <div className="md:h-[240px] md:w-[430px] h-[120px] w-[230px] relative">
                 <Image
-                  src="/assets/Normal Transpalent.png"
+                  src="/assets/baby.png"
                   alt="Picture of the author"
                   layout="fill"
                   objectFit="cover"
@@ -71,36 +77,36 @@ const Home: NextPageWithLayout = () => {
                 />
               </div>
 
-              <p className="text-center text-xl font-bold my-5">Common</p>
-              <p className="text-center text-xl font-bold">TOTAL : XXXX</p>
+              <p className="text-center text-xl font-bold my-5">Baby Wolf</p>
+              <p className="text-center text-xl font-bold">TOTAL : 16,000</p>
             </div>
 
             <div className="flex flex-col justify-center items-center">
-              <div className="md:h-[240px] md:w-[430px] h-[100px] w-[230px] relative">
+              <div className="md:h-[240px] md:w-[430px] h-[120px] w-[230px] relative">
                 <Image
-                  src="/assets/Rare Transpalent.png"
+                  src="/assets/master.png"
                   alt="Picture of the author"
                   layout="fill"
                   objectFit="cover"
                   priority
                 />
               </div>
-              <p className="text-center text-xl font-bold my-5">Rare</p>
-              <p className="text-center text-xl font-bold">TOTAL : XXXX</p>
+              <p className="text-center text-xl font-bold my-5">Master Wolf</p>
+              <p className="text-center text-xl font-bold">TOTAL : 3,500</p>
             </div>
 
             <div className="flex flex-col justify-center items-center">
-              <div className="md:h-[240px] md:w-[430px] h-[100px] w-[230px] relative">
+              <div className="md:h-[240px] md:w-[430px] h-[120px] w-[230px] relative">
                 <Image
-                  src="/assets/UncommonTranspalent.png"
+                  src="/assets/captan.png"
                   alt="Picture of the author"
                   layout="fill"
                   objectFit="cover"
                   priority
                 />
               </div>
-              <p className="text-center text-xl font-bold my-5">Legendary</p>
-              <p className="text-center text-xl font-bold">TOTAL : XXXX</p>
+              <p className="text-center text-xl font-bold my-5">Captain Wolf</p>
+              <p className="text-center text-xl font-bold">TOTAL : 500</p>
             </div>
           </div>
 
@@ -108,7 +114,7 @@ const Home: NextPageWithLayout = () => {
             WOLF DOOR PRIVILEDGES
           </p>
           <div className="flex justify-center">
-            <ul className="list-disc text-sm md:text-base">
+            <ul className="list-disc text-sm md:text-base text-center pl-0">
               <li>
                 nulla turpis. At placerat eleifend ullamcorper quis semper
                 vestibulum bibendum consequat.
@@ -160,12 +166,12 @@ const Home: NextPageWithLayout = () => {
                 Hunt the limited NFTs for dressing your avatar in the missions.
                 Trade or sell them on a marketplace whenever you want.
               </p>
-              <button
-                type="button"
+              <Link
+                href="/wolf-closet"
                 className="w-[205px] text-white bg-gradient-to-br from-[#E2211C] to-[#FFDEDE] hover:from-[#E2211C]/90 hover:to-[#FFDEDE]/90 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-2xl text-sm px-5 py-2.5 text-center mr-2 mb-2"
               >
                 Go To Wolf Closet
-              </button>
+              </Link>
             </div>
           </div>
           <div className="flex flex-col justify-center items-center my-10 md:my-14">

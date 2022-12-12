@@ -91,7 +91,7 @@ export const Topbar = () => {
 
               <div className="block md:hidden">
                 <button
-                  className="rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75"
+                  className="rounded bg-gray-700/50 p-2 text-white transition hover:text-white"
                   onClick={handleClick}
                 >
                   <svg
@@ -130,16 +130,16 @@ export const Topbar = () => {
         leaveTo="opacity-0 scale-95"
       >
         {() => (
-          <div className="md:hidden justify-between items-center w-full inset-0 z-[100] overflow-x-hidden overflow-y-auto">
-            <div className="flex-col px-2 pt-2 pb-3 space-y-1 sm:px-3 justify-center">
-              <ul className="flex flex-col p-4 mt-4 bg-white rounded-lg border border-gray-100 ">
+          <div className="bg-[#171717] md:hidden justify-between items-center w-full inset-0 z-[100] overflow-x-hidden overflow-y-auto">
+            <div className="flex-col space-y-1 sm:px-3 justify-center">
+              <ul className="flex flex-col p-4 ">
                 <Link
                   href="/"
-                  className="block py-2 pr-4 pl-3 text-dark hover:bg-gray-300 rounded "
+                  className="block py-2 pr-4 pl-3 text-white hover:bg-gray-300 rounded "
                   legacyBehavior
                 >
                   <a
-                    className="block py-2 pr-4 pl-3 text-dark hover:bg-gray-300 rounded "
+                    className="block py-2 pr-4 pl-3 text-white hover:bg-gray-300 rounded "
                     onClick={handleClick}
                   >
                     Home
@@ -147,11 +147,11 @@ export const Topbar = () => {
                 </Link>
                 <Link
                   href="/wolf-closet"
-                  className="block py-2 pr-4 pl-3 text-dark hover:bg-gray-300 rounded "
+                  className="block py-2 pr-4 pl-3 text-white hover:bg-gray-300 rounded "
                   legacyBehavior
                 >
                   <a
-                    className="block py-2 pr-4 pl-3 text-dark hover:bg-gray-300 rounded "
+                    className="block py-2 pr-4 pl-3 text-white hover:bg-gray-300 rounded "
                     onClick={handleClick}
                   >
                     Wolf Closet
@@ -159,11 +159,11 @@ export const Topbar = () => {
                 </Link>
                 <Link
                   href="/missions"
-                  className="block py-2 pr-4 pl-3 text-dark hover:bg-gray-300 rounded "
+                  className="block py-2 pr-4 pl-3 text-white hover:bg-gray-300 rounded "
                   legacyBehavior
                 >
                   <a
-                    className="block py-2 pr-4 pl-3 text-dark hover:bg-gray-300 rounded "
+                    className="block py-2 pr-4 pl-3 text-white hover:bg-gray-300 rounded "
                     onClick={handleClick}
                   >
                     Mission
