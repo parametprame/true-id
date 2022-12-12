@@ -91,14 +91,14 @@ const Home: NextPageWithLayout = () => {
                   priority
                 />
               </div>
-              <p className="text-center text-xl font-bold my-5">Wolf Citizen</p>
+              <p className="text-center text-xl font-bold my-5">Master Wolf</p>
               <p className="text-center text-xl font-bold">TOTAL : 3,500</p>
             </div>
 
             <div className="flex flex-col justify-center items-center">
               <div className="md:h-[240px] md:w-[430px] h-[120px] w-[230px] relative">
                 <Image
-                  src="/assets/captan.png"
+                  src="/assets/alpha.png"
                   alt="Picture of the author"
                   layout="fill"
                   objectFit="cover"
