@@ -20,6 +20,7 @@ export const Topbar = () => {
   const handleConnectWallet = () => {
     localStorage.setItem("connect", "true");
     setConnect(true);
+    window.location.reload();
   };
 
   useEffect(() => {
