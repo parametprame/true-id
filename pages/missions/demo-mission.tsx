@@ -73,7 +73,7 @@ const DemoMission = () => {
               <div className="flex px-10">
                 <div className="flex flex-col">
                   <span className="text-sm flex items-center px-2 pt-5 text-black">
-                    You're not signed in
+                    You&lsquo; not signed in
                   </span>
                   <p className="text-sm px-2 pb-5 text-black font-bold">
                     Please connecting your wallet.
