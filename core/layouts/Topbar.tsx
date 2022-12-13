@@ -1,20 +1,38 @@
-import { IconContext } from "react-icons";
-import { MdGTranslate } from "react-icons/md";
 import Link from "next/link";
 import Image from "next/image";
 import { Transition } from "@headlessui/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { Modal } from "core/components/connect-wallet/Modal";
 
 export const Topbar = () => {
   const [open, setOpen] = useState<boolean>(false);
+  const [modalOpen, setModalOpen] = useState<boolean>(false);
+  const [isConnect, setConnect] = useState<boolean>(false);
 
   const handleClick = () => {
     setOpen(!open);
   };
 
+  const handleClose = () => {
+    setModalOpen(!modalOpen);
+  };
+
+  const handleConnectWallet = () => {
+    localStorage.setItem("connect", "true");
+    setConnect(true);
+    window.location.reload();
+  };
+
+  useEffect(() => {
+    const connect = localStorage.getItem("connect");
+    if (connect != null) {
+      setConnect(true);
+    }
+  }, []);
+
   return (
     <>
-      <div className="px-4 sm:px-6 lg:px-2 shadow-md ">
+      <div className="px-4 sm:px-6 lg:px-2 shadow-md bg-black">
         <div className="flex h-16 md:h-24 items-center justify-between container mx-auto px-4">
           <Link href="/">
             <div className="relative h-12 sm:h-52 w-[100px]">
@@ -32,7 +50,7 @@ export const Topbar = () => {
               <ul className="flex items-center gap-6 text-sm">
                 <li>
                   <Link href="/">
-                    <p className="text-gray-500 transition hover:text-gray-500/75">
+                    <p className="text-white transition hover:text-gray-500/75">
                       Home
                     </p>
                   </Link>
@@ -40,15 +58,15 @@ export const Topbar = () => {
 
                 <li>
                   <Link href="/wolf-closet">
-                    <p className="text-gray-500 transition hover:text-gray-500/75">
+                    <p className="text-white transition hover:text-gray-500/75">
                       Wolf Closet
                     </p>
                   </Link>
                 </li>
 
                 <li>
-                  <Link href="/">
-                    <p className="text-gray-500 transition hover:text-gray-500/75">
+                  <Link href="/missions">
+                    <p className="text-white transition hover:text-gray-500/75">
                       Mission
                     </p>
                   </Link>
@@ -58,17 +76,23 @@ export const Topbar = () => {
 
             <div className="flex items-center gap-4">
               <div className="sm:flex sm:gap-4">
-                <a
-                  className="rounded-md bg-[#E2211C] hover:bg-[#f55e5b] px-5 py-2.5 text-sm font-medium text-white shadow"
-                  href="/"
-                >
-                  Connect Wallet
-                </a>
+                {isConnect ? (
+                  <p className="rounded-md bg-gradient-to-r from-[#E2211C] to-[#FFDEDE] hover:from-[#E2211C]/90 hover:to-[#FFDEDE]/90 px-5 py-2.5 text-sm font-medium text-white shadow">
+                    0xTasRasdUasdE...ID
+                  </p>
+                ) : (
+                  <button
+                    className="rounded-md bg-gradient-to-r from-[#E2211C] to-[#FFDEDE] hover:from-[#E2211C]/90 hover:to-[#FFDEDE]/90 px-5 py-2.5 text-sm font-medium text-white shadow"
+                    onClick={() => setModalOpen(true)}
+                  >
+                    Connect Wallet
+                  </button>
+                )}
               </div>
 
               <div className="block md:hidden">
                 <button
-                  className="rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75"
+                  className="rounded bg-gray-700/50 p-2 text-white transition hover:text-white"
                   onClick={handleClick}
                 >
                   <svg
@@ -90,6 +114,11 @@ export const Topbar = () => {
             </div>
           </div>
         </div>
+        <Modal
+          onClose={handleClose}
+          isOpen={modalOpen}
+          onConnect={handleConnectWallet}
+        />
       </div>
 
       <Transition
@@ -102,16 +131,16 @@ export const Topbar = () => {
         leaveTo="opacity-0 scale-95"
       >
         {() => (
-          <div className="md:hidden justify-between items-center w-full inset-0 z-[100] overflow-x-hidden overflow-y-auto">
-            <div className="flex-col px-2 pt-2 pb-3 space-y-1 sm:px-3 justify-center">
-              <ul className="flex flex-col p-4 mt-4 bg-white rounded-lg border border-gray-100 ">
+          <div className="bg-[#171717] md:hidden justify-between items-center w-full inset-0 z-[100] overflow-x-hidden overflow-y-auto">
+            <div className="flex-col space-y-1 sm:px-3 justify-center">
+              <ul className="flex flex-col p-4 ">
                 <Link
                   href="/"
-                  className="block py-2 pr-4 pl-3 text-dark hover:bg-gray-300 rounded "
+                  className="block py-2 pr-4 pl-3 text-white hover:bg-gray-300 rounded "
                   legacyBehavior
                 >
                   <a
-                    className="block py-2 pr-4 pl-3 text-dark hover:bg-gray-300 rounded "
+                    className="block py-2 pr-4 pl-3 text-white hover:bg-gray-300 rounded "
                     onClick={handleClick}
                   >
                     Home
@@ -119,23 +148,23 @@ export const Topbar = () => {
                 </Link>
                 <Link
                   href="/wolf-closet"
-                  className="block py-2 pr-4 pl-3 text-dark hover:bg-gray-300 rounded "
+                  className="block py-2 pr-4 pl-3 text-white hover:bg-gray-300 rounded "
                   legacyBehavior
                 >
                   <a
-                    className="block py-2 pr-4 pl-3 text-dark hover:bg-gray-300 rounded "
+                    className="block py-2 pr-4 pl-3 text-white hover:bg-gray-300 rounded "
                     onClick={handleClick}
                   >
                     Wolf Closet
                   </a>
                 </Link>
                 <Link
-                  href="/"
-                  className="block py-2 pr-4 pl-3 text-dark hover:bg-gray-300 rounded "
+                  href="/missions"
+                  className="block py-2 pr-4 pl-3 text-white hover:bg-gray-300 rounded "
                   legacyBehavior
                 >
                   <a
-                    className="block py-2 pr-4 pl-3 text-dark hover:bg-gray-300 rounded "
+                    className="block py-2 pr-4 pl-3 text-white hover:bg-gray-300 rounded "
                     onClick={handleClick}
                   >
                     Mission

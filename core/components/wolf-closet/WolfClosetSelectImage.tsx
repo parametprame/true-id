@@ -1,6 +1,7 @@
 import { BackgroundPage } from "core/components/wolf-closet/Pages/BackgroundPage";
 import { ShirtPage } from "core/components/wolf-closet/Pages/ShirtPage";
 import { TopPage } from "core/components/wolf-closet/Pages/TopPage";
+import { AssetQuestPage } from "core/components/wolf-closet/Pages/AssetQuest";
 import { useState } from "react";
 import html2canvas from "html2canvas";
 import { useUserContext } from "core/context/store";
@@ -37,6 +38,9 @@ const WolfClosetSelectImage = () => {
       case "3":
         setPage("pagethree");
         break;
+      case "4":
+        setPage("pagefour");
+        break;
       default:
         setPage("pageone");
     }
@@ -44,32 +48,66 @@ const WolfClosetSelectImage = () => {
 
   const ManuCloset = () => {
     return (
-      <>
-        <div
-          className={`${
-            page === "pageone" ? "bg-slate-300 " : ""
-          } hover:bg-slate-300  rounded-full items-center py-3 px-2 cursor-pointer `}
-          onClick={() => nextPageNumber("1")}
-        >
-          <a className="text-xl px-2">Background</a>
+      <div className="w-screen mt-12 flex justify-center md:justify-end">
+        <div className="flex flex justify-center w-max">
+          <div
+            className={`${
+              page === "pageone" ? "bg-white" : ""
+            } hover:bg-slate-300  rounded-full items-center py-3 px-2 cursor-pointer `}
+            onClick={() => nextPageNumber("1")}
+          >
+            <a
+              className={`${
+                page === "pageone" ? "text-sm md:text-xl px-2 text-black" : ""
+              } text-sm md:text-xl px-2 text-white `}
+            >
+              Background
+            </a>
+          </div>
+          <div
+            className={`${
+              page === "pagethree" ? "bg-white " : ""
+            } hover:bg-slate-300  rounded-full items-center py-3 px-2 cursor-pointer `}
+            onClick={() => nextPageNumber("3")}
+          >
+            <a
+              className={`${
+                page === "pagethree" ? "text-sm md:text-xl px-2 text-black" : ""
+              } text-sm md:text-xl px-2 text-white `}
+            >
+              Top
+            </a>
+          </div>
+          <div
+            className={`${
+              page === "pagetwo" ? "bg-white" : ""
+            } hover:bg-slate-300  rounded-full items-center py-3 px-2 cursor-pointer `}
+            onClick={() => nextPageNumber("2")}
+          >
+            <a
+              className={`${
+                page === "pagetwo" ? "text-sm md:text-xl px-2 text-black" : ""
+              } text-sm md:text-xl px-2 text-white `}
+            >
+              Shirt
+            </a>
+          </div>
+          <div
+            className={`${
+              page === "pagefour" ? "bg-white" : ""
+            } hover:bg-slate-300  rounded-full items-center py-3 px-2 cursor-pointer `}
+            onClick={() => nextPageNumber("4")}
+          >
+            <a
+              className={`${
+                page === "pagefour" ? "text-sm md:text-xl px-2 text-black" : ""
+              } text-sm md:text-xl px-2 text-white `}
+            >
+              Quest Asset
+            </a>
+          </div>
         </div>
-        <div
-          className={`${
-            page === "pagethree" ? "bg-slate-300 " : ""
-          } hover:bg-slate-300  rounded-full items-center py-3 px-2 cursor-pointer `}
-          onClick={() => nextPageNumber("3")}
-        >
-          <a className="text-xl px-2">Top</a>
-        </div>
-        <div
-          className={`${
-            page === "pagetwo" ? "bg-slate-300 " : ""
-          } hover:bg-slate-300  rounded-full items-center py-3 px-2 cursor-pointer `}
-          onClick={() => nextPageNumber("2")}
-        >
-          <a className="text-xl px-2">Shirt</a>
-        </div>
-      </>
+      </div>
     );
   };
 
@@ -130,6 +168,7 @@ const WolfClosetSelectImage = () => {
             pageone: <BackgroundPage />,
             pagetwo: <ShirtPage />,
             pagethree: <TopPage />,
+            pagefour: <AssetQuestPage />,
           }[page]
         }
       </div>

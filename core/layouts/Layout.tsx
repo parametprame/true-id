@@ -1,4 +1,5 @@
 import { Topbar } from "./Topbar";
+import { Toat } from "core/components/Toat";
 
 interface Props {
   children: React.ReactNode;
@@ -8,7 +9,8 @@ const Layout = ({ children }: Props) => {
   return (
     <div className="font-nunito">
       <Topbar />
-      <div className="px-4 sm:px-6 lg:px-2 mx-auto max-w-screen-2xl">
+      <Toat />
+      <div className="px-4 sm:px-6 lg:px-14 mx-auto bg-[#171717] min-h-screen">
         {children}
       </div>
     </div>
