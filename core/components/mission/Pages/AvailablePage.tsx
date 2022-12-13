@@ -6,7 +6,7 @@ export const AvailablePage = () => {
   return (
     <>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 py-5">
-        {/* <Link href="/missions/demo-mission">
+        <Link href="/missions/demo-mission">
           <div className="flex h-max bg-slate-300 rounded-2xl md:transform md:transition md:duration-300 md:hover:scale-110	cursor-pointer text-black">
             <div className="w-7/12 md:w-7/12 mx-0 md:mx-5">
               <div className="flex flex-col py-3 px-5 md:px-0">
@@ -32,11 +32,11 @@ export const AvailablePage = () => {
               <img
                 src="assets/reward.png"
                 alt="base image"
-                className="rounded-2xl object-cover h-max md:h-40"
+                className="rounded-2xl object-cover"
               />
             </div>
           </div>
-        </Link> */}
+        </Link>
         {mockId.map((item) => {
           return (
             <Link href={`/missions/${item}`} key={item}>
@@ -69,7 +69,7 @@ export const AvailablePage = () => {
                   <img
                     src="assets/franc.jpg"
                     alt="base image"
-                    className="rounded-2xl object-cover h-max md:h-40"
+                    className="rounded-2xl object-cover"
                   />
                 </div>
               </div>

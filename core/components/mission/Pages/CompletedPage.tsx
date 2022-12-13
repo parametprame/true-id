@@ -42,7 +42,7 @@ export const CompletedPage = () => {
                 <img
                   src="assets/reward.png"
                   alt="base image"
-                  className="rounded-2xl object-cover h-max md:h-40"
+                  className="rounded-2xl object-cover"
                 />
               </div>
             </div>
