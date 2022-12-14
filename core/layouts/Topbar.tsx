@@ -77,12 +77,12 @@ export const Topbar = () => {
             <div className="flex items-center gap-4">
               <div className="sm:flex sm:gap-4">
                 {isConnect ? (
-                  <p className="rounded-md bg-gradient-to-r from-[#E2211C] to-[#FFDEDE] hover:from-[#E2211C]/90 hover:to-[#FFDEDE]/90 px-5 py-2.5 text-sm font-medium text-white shadow">
-                    0xTasRasdUasdE...ID
+                  <p className=" rounded-md bg-[#E2211C] hover:bg-[#f55e5b] px-5 py-2.5 text-sm font-medium text-white shadow">
+                    0x123..a
                   </p>
                 ) : (
                   <button
-                    className="rounded-md bg-gradient-to-r from-[#E2211C] to-[#FFDEDE] hover:from-[#E2211C]/90 hover:to-[#FFDEDE]/90 px-5 py-2.5 text-sm font-medium text-white shadow"
+                    className="rounded-md bg-[#E2211C] hover:bg-[#f55e5b] px-5 py-2.5 text-sm font-medium text-white shadow"
                     onClick={() => setModalOpen(true)}
                   >
                     Connect Wallet

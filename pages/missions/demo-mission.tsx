@@ -121,7 +121,7 @@ const DemoMission = () => {
             {!claimed && alreadyClaim ? (
               <button
                 onClick={handleClaim}
-                className="w-[200px] md:w-max text-white bg-gradient-to-br from-[#E2211C] to-[#FFDEDE] hover:from-[#E2211C]/90 hover:to-[#FFDEDE]/90 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-10 py-2.5 text-center mt-5"
+                className="w-[200px] md:w-max text-white  bg-[#E2211C] hover:bg-[#f55e5b]  focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-10 py-2.5 text-center mt-5"
               >
                 Claim Reward
               </button>

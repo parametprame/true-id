@@ -48,8 +48,8 @@ const WolfClosetSelectImage = () => {
 
   const ManuCloset = () => {
     return (
-      <div className="w-screen mt-12 flex justify-center md:justify-end">
-        <div className="flex flex justify-center w-max">
+      <div className="mt-12 flex justify-center md:justify-end">
+        <div className="flex justify-center w-max">
           <div
             className={`${
               page === "pageone" ? "bg-white" : ""
@@ -58,8 +58,8 @@ const WolfClosetSelectImage = () => {
           >
             <a
               className={`${
-                page === "pageone" ? "text-sm md:text-xl px-2 text-black" : ""
-              } text-sm md:text-xl px-2 text-white `}
+                page === "pageone" ? "text-xs md:text-xl px-2 text-black" : ""
+              } text-xs md:text-xl px-2 text-white `}
             >
               Background
             </a>
@@ -72,8 +72,8 @@ const WolfClosetSelectImage = () => {
           >
             <a
               className={`${
-                page === "pagethree" ? "text-sm md:text-xl px-2 text-black" : ""
-              } text-sm md:text-xl px-2 text-white `}
+                page === "pagethree" ? "text-xs md:text-xl px-2 text-black" : ""
+              } text-xs md:text-xl px-2 text-white `}
             >
               Top
             </a>
@@ -86,8 +86,8 @@ const WolfClosetSelectImage = () => {
           >
             <a
               className={`${
-                page === "pagetwo" ? "text-sm md:text-xl px-2 text-black" : ""
-              } text-sm md:text-xl px-2 text-white `}
+                page === "pagetwo" ? "text-xs md:text-xl px-2 text-black" : ""
+              } text-xs md:text-xl px-2 text-white `}
             >
               Shirt
             </a>
@@ -100,8 +100,8 @@ const WolfClosetSelectImage = () => {
           >
             <a
               className={`${
-                page === "pagefour" ? "text-sm md:text-xl px-2 text-black" : ""
-              } text-sm md:text-xl px-2 text-white `}
+                page === "pagefour" ? "text-xs md:text-xl px-2 text-black" : ""
+              } text-xs md:text-xl px-2 text-white `}
             >
               Quest Asset
             </a>
@@ -113,7 +113,7 @@ const WolfClosetSelectImage = () => {
 
   return (
     <>
-      <div className="hidden md:flex flex-row justify-center md:justify-end">
+      <div className="hidden md:flex flex-row justify-center md:justify-end ">
         <ManuCloset />
       </div>
       <div className="flex flex-col md:flex-row my-5">
@@ -160,7 +160,7 @@ const WolfClosetSelectImage = () => {
           </div>
         </div>
 
-        <div className="block md:hidden flex flex-row justify-center my-5">
+        <div className="block relative md:hidden flex flex-row justify-center my-5 overflow-x-scroll">
           <ManuCloset />
         </div>
         {

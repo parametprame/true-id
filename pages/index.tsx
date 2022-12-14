@@ -8,7 +8,7 @@ const Home: NextPageWithLayout = () => {
     <div className="container mx-auto px-4 text-white">
       <div className="flex flex-col items-center justify-center py-16 mx-auto max-w-screen-2xl">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 content-center">
-          <div className="md:w-[430px] md:text-left text-center order-2 md:order-1">
+          <div className="md:w-full text-center md:text-left order-2 md:order-1 lg:pl-40 md:mt-10 lg:mt-20">
             <p className="text-4xl md:text-6xl font-extrabold py-5 md:py-0 text-primary-500">
               Wolf Door Pass
             </p>
@@ -21,7 +21,7 @@ const Home: NextPageWithLayout = () => {
 
             <Link
               href="/buy-pass"
-              className="w-[200px] md:w-max text-white bg-gradient-to-br from-[#E2211C] to-[#FFDEDE] hover:from-[#E2211C]/90 hover:to-[#FFDEDE]/90 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-10 py-2.5 text-center mr-2 mb-2"
+              className="w-[200px] md:w-max text-white bg-[#E2211C] hover:bg-[#f55e5b] focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-10 py-2.5 text-center mr-2 mb-2"
             >
               Buy Pass
             </Link>
@@ -37,9 +37,9 @@ const Home: NextPageWithLayout = () => {
             </p>
           </div>
           <div className="order-1 md:order-2 flex  justify-center md:justify-end lg:justify-center items-center">
-            <div className="md:h-[280px] md:w-[280px] lg:h-[500px] lg:w-[500px] h-[250px] w-[250px] relative">
+            <div className="md:h-[380px] md:w-[380px] lg:h-[500px] lg:w-full h-[240px] w-[350px] relative">
               <Image
-                src="/assets/franc.png"
+                src="/assets/friend_dog.png"
                 alt="Picture of the author"
                 layout="fill"
                 objectFit="cover"
@@ -168,7 +168,7 @@ const Home: NextPageWithLayout = () => {
               </p>
               <Link
                 href="/wolf-closet"
-                className="w-[205px] text-white bg-gradient-to-br from-[#E2211C] to-[#FFDEDE] hover:from-[#E2211C]/90 hover:to-[#FFDEDE]/90 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-2xl text-sm px-5 py-2.5 text-center mr-2 mb-2"
+                className="w-[205px] text-white  bg-[#E2211C] hover:bg-[#f55e5b] focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-2xl text-sm px-5 py-2.5 text-center mr-2 mb-2"
               >
                 Go To Wolf Closet
               </Link>
